@@ -1,0 +1,44 @@
+#img{
+   border-radius: 100px;
+    width: 150px;
+    border: 3px solid black;
+}
+
+#nome{
+    text-align: center;
+}
+
+.s1{
+    text-align: center;
+}
+html{
+    cursor: crosshair;
+    background-color: rgb(165, 163, 163);
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px;
+    width: 500px;
+    padding-left: 36%;
+}
+header{
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+    border-radius: 25px;
+
+}
+.cor{
+    background-color:  rgb(240, 240, 240);
+    padding: 1px;
+    margin-top:10px;
+    border-radius: 25px;
+}
+.estilo{
+    border-radius: 20px;
+    width: 100px;
+    cursor:pointer
+}
+#cores{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

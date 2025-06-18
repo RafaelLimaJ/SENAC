@@ -1,0 +1,22 @@
+html{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    background-color: rgb(198, 228, 255);
+}
+.estilo{
+    border: black 2px solid;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    background-image:url(https://www.bing.com/th/id/OIP.-vxvLV9BU71FdDWW-_jvDwHaE8?w=150&h=100&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
+}

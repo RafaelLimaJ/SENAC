@@ -1,0 +1,72 @@
+/* COR DE FUNDO */
+html{
+    background-color: rgb(41, 172, 233);
+    width: 100%;
+}
+
+/* TITULO DO SITE */
+.id1 {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 55px;
+    width: 200px;
+}
+
+/* ID PARA MODELOS DE MOTOS COM COR TAMANHO ETC */
+#modelos{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-self: center;
+    background-color: white;
+    width: 1460px;
+    height: 320px;
+    border: black 2px solid;
+    border-radius: 20px;
+    font: bolder;
+    font-weight: bolder;
+    top: 90px;
+    font-size: 13px;
+}
+    /* CONFIG DE LOCAL DE TITULOS DO TAMANHO H2 */
+h2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+    /* CLASSE MARCAS QUE COLOCA MARGEM NOS TITULOS DE TAMANHO H3 DA CLASSE */
+.marcas h3{
+    margin-left: 25px;
+    
+}
+    /* TAMANHO, COR, LOCAL, DO BOTAO DE COMPRAR */
+#comprar{
+    display: flex;
+    position: relative;
+    background-color: rgb(0, 196, 0);
+    border-radius: 100px;
+    width: 150px;
+    height: 75px;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    /* TAMANHO DAS IMAGENS / SEM IMAGENS POR ENQUANTO*/
+img {
+    width: 200px; /* Define a largura */
+    height: auto; /* Mantém a proporção */
+  }
+  

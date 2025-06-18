@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- FORMULARIO SIMPLE DE CADASTRO -->
+    <div class = estilo>
+        <form onsubmit="emitir()">
+        <h3>CADASTRO</h3>
+            <!-- DIGITAR NOME -->
+            <label for="Nome"></label>
+            <p>Digite seu nome</p>
+            <input type="text" name="Nome" id="nome" placeholder="Nome completo">
+            <!-- DIGITAR EMAIL -->
+            <p>Digite seu email</p>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="email@gmail.com">
+            <!-- DIGITAR TELEFONE -->
+            <p>Digite seu telefone</p>
+            <label for="telefone"></label>
+            <input type="tel" name="telefone" id="telefone" placeholder="(00)00000-0000">
+            <!-- DIV PARA CPF E CNPJ -->
+            <div>
+            <p>Digite seu CPF / CNPJ</p>
+            <label for="cpf">CPF</label>
+            <input type="radio" name="cpf/cnpj" id="cpf">
+
+            <label for="cnpj">CNPJ</label>
+            <input type="radio" name="cpf/cnpj" id="cnpj"></div>
+            <!-- DIGITALR DATA DE NASCIMENTO -->
+            <p>Digite sua data de nascimento</p>
+            <label for="data"></label>
+            <input type="date" name="data" id="data">
+            <div><br>
+            <!-- ACEITAR TERMOS -->
+            <label for="termos">termos de uso</label>
+            <input type="checkbox" name="termos" id=""></div><br>
+            <!-- ENVIAR FORMULARIO -->    
+            <input type="submit" value="ENVIAR FORMULARIO">
+            </form>
+        </div>
+        </body>
+
+        <script>
+            function emitir() {
+                alert("Formulario enviado");
+            }
+
+        </script>
+</html>
