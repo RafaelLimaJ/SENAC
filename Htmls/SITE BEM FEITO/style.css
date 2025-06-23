@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    background-color: #e6f8ff;
+}
+header,footer{
+    padding: 1rem;
+    background-color: #2B2D42;
+    color: #FFECD1;
+    text-align: center;
+}
+header{
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.541);
+
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(clamp(10rem,15rem,20rem),1fr));
+    padding: 2rem;
+    gap: 1rem;
+}
+.card{
+    background-color: #8D99AE;
+    border-radius: 20px;
+    height: 10rem;
+    text-align: center;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.541);
+}
+.card:hover{
+    background-color: #7a8494;
+    transform: scale(1.05);
+    transition:transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:active{
+    transform: scale(0.95);
+    transition:transform 0.3s ease-in-out;   
+}
