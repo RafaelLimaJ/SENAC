@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrossel de Cards Ampliado</title>
+  <title>Carrossel de Cards com Interações</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body class="bg-dark">
 
+  <!-- Toast Container (para as notificações) -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Notificação</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body"></div>
+    </div>
+  </div>
+
+  <!-- Modal Genérico -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Aviso</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Esta é uma mensagem de exemplo usando Modal do Bootstrap!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container py-5">
-    <h1 class="text-center mb-5 text-light fw-bold">Carrossel de Cards com Botões</h1>
+    <h1 class="text-center mb-5 text-light fw-bold">Carrossel Interativo</h1>
 
     <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
       
@@ -18,94 +47,65 @@
         <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="4"></button>
-        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="5"></button>
       </div>
 
-      <div class="carousel-inner bg-secondary bg-opacity-25 p-5 rounded shadow">
+      <div class="carousel-inner bg-secondary bg-opacity-25 p-4 rounded shadow">
 
-        <!-- Card 1 -->
+        <!-- Card 1 - Modal -->
         <div class="carousel-item active">
           <div class="card mx-auto shadow rounded border-0 bg-dark text-white" style="max-width: 22rem;">
             <div class="card-body text-center">
-              <h5 class="card-title text-info">Card 1 - Opções Básicas</h5>
-              <p class="card-text">Card com botões primários e secundários para ações principais.</p>
+              <h5 class="card-title text-info">Card 1 - Modal</h5>
+              <p class="card-text">Botões que acionam modais (caixas de diálogo).</p>
               <div class="d-grid gap-2 d-md-block mt-3">
-                <button class="btn btn-primary me-2" type="button">Principal</button>
-                <button class="btn btn-outline-light" type="button">Secundário</button>
+                <button class="btn btn-primary me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Abrir Modal
+                </button>
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#successModal">
+                  Sucesso
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card 2 - Toast -->
         <div class="carousel-item">
           <div class="card mx-auto shadow rounded border-0 bg-dark text-white" style="max-width: 22rem;">
             <div class="card-body text-center">
-              <h5 class="card-title text-success">Card 2 - Ações de Status</h5>
-              <p class="card-text">Botões para indicar diferentes estados ou resultados.</p>
+              <h5 class="card-title text-warning">Card 2 - Notificações</h5>
+              <p class="card-text">Botões que exibem notificações temporárias.</p>
               <div class="d-grid gap-2 mt-3">
-                <button class="btn btn-success mb-2" type="button">Sucesso</button>
-                <button class="btn btn-danger" type="button">Erro</button>
+                <button class="btn btn-warning mb-2" type="button" data-bs-toggle="toast" data-bs-target="#liveToast">
+                  Mostrar Toast
+                </button>
+                <button class="btn btn-outline-info" type="button" data-bs-toggle="toast" data-bs-target="#liveToast">
+                  Outro Toast
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3 - Alertas -->
         <div class="carousel-item">
           <div class="card mx-auto shadow rounded border-0 bg-dark text-white" style="max-width: 22rem;">
             <div class="card-body text-center">
-              <h5 class="card-title text-warning">Card 3 - Múltiplas Opções</h5>
-              <p class="card-text">Card com três opções diferentes de ação.</p>
+              <h5 class="card-title text-danger">Card 3 - Alertas</h5>
+              <p class="card-text">Alertas que aparecem na própria página.</p>
               <div class="d-grid gap-2 mt-3">
-                <button class="btn btn-warning" type="button">Aviso</button>
-                <button class="btn btn-info" type="button">Informação</button>
-                <button class="btn btn-light" type="button">Claro</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="carousel-item">
-          <div class="card mx-auto shadow rounded border-0 bg-dark text-white" style="max-width: 22rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title text-danger">Card 4 - Botões em Bloco</h5>
-              <p class="card-text">Botões que ocupam toda a largura do card.</p>
-              <div class="d-grid gap-2 mt-3">
-                <button class="btn btn-danger" type="button">Ação Crítica</button>
-                <button class="btn btn-outline-info" type="button">Ação Alternativa</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="carousel-item">
-          <div class="card mx-auto shadow rounded border-0 bg-dark text-white" style="max-width: 22rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title text-info">Card 5 - Combinação de Estilos</h5>
-              <p class="card-text">Mistura de botões preenchidos e outline.</p>
-              <div class="d-grid gap-2 d-md-block mt-3">
-                <button class="btn btn-info me-2" type="button">Info</button>
-                <button class="btn btn-outline-success me-2" type="button">Outline</button>
-                <button class="btn btn-secondary" type="button">Padrão</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="carousel-item">
-          <div class="card mx-auto shadow rounded border-0 bg-dark text-white" style="max-width: 22rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title text-light">Card 6 - Botões com Ícones</h5>
-              <p class="card-text">Simulação de botões com ícones (texto representativo).</p>
-              <div class="d-grid gap-2 d-md-block mt-3">
-                <button class="btn btn-primary me-2" type="button">✓ Aprovar</button>
-                <button class="btn btn-outline-danger" type="button">✗ Rejeitar</button>
+                <div class="alert alert-success d-none" role="alert" id="successAlert">
+                  Ação realizada com sucesso!
+                </div>
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#successAlert">
+                  Mostrar Alerta
+                </button>
+                <button class="btn btn-outline-danger mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#errorAlert">
+                  Alerta de Erro
+                </button>
+                <div class="alert alert-danger mt-2 collapse" role="alert" id="errorAlert">
+                  Ocorreu um erro na operação!
+                </div>
               </div>
             </div>
           </div>
@@ -125,7 +125,36 @@
     </div>
   </div>
 
+  <!-- Modal de Sucesso -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-success">
+          <h5 class="modal-title text-success">Sucesso!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ação concluída com sucesso!</p>
+        </div>
+        <div class="modal-footer border-success">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Inicialização dos Toasts -->
+  <script>
+    // Este script é apenas para inicialização e não é necessário para a funcionalidade básica
+    document.addEventListener('DOMContentLoaded', function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+        return new bootstrap.Toast(toastEl)
+      })
+    })
+  </script>
 </body>
 </html>
