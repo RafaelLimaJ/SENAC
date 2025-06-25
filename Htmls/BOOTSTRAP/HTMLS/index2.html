@@ -6,6 +6,13 @@
   <title>Carrossel de Cards com Interações</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    .card-img-custom {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
 </head>
 <body class="bg-dark">
 
@@ -142,19 +149,47 @@
       </div>
     </div>
   </div>
+  
+  <div class="container mt-5 pb-5">
+    <h2 class="text-center mb-4 text-light">Galeria de Cards</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 gallery-card bg-dark text-white border-secondary">
+          <img src="https://www.bing.com/th/id/OIP.-vxvLV9BU71FdDWW-_jvDwHaE8?w=150&h=100&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" class="card-img-top card-img-custom" alt="Natureza">
+          <div class="card-body">
+            <h5 class="card-title text-info">Card com Imagem 1</h5>
+            <p class="card-text">Exemplo de card com imagem de natureza.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 gallery-card bg-dark text-white border-secondary">
+          <img src="https://www.bing.com/th/id/OIP.2zRCkDzffAtfdffvRipKNQHaFj?w=264&h=211&c=8&rs=1&qlt=90&o=6&cb=iavawebpc1&pid=3.1&rm=2" class="card-img-top card-img-custom" alt="Cidade">
+          <div class="card-body">
+            <h5 class="card-title text-success">Card com Imagem 2</h5>
+            <p class="card-text">Exemplo de card com imagem urbana.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 gallery-card bg-dark text-white border-secondary">
+          <img src="/Auau.png" class="card-img-top card-img-custom" alt="Tecnologia">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Card com Imagem 3</h5>
+            <p class="card-text">Card demonstrativo com imagem de tecnologia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Inicialização dos Toasts -->
-  <script>
-    // Este script é apenas para inicialização e não é necessário para a funcionalidade básica
-    document.addEventListener('DOMContentLoaded', function() {
-      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-      var toastList = toastElList.map(function(toastEl) {
-        return new bootstrap.Toast(toastEl)
-      })
-    })
-  </script>
 </body>
-</html>
+</html> 
