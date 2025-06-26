@@ -102,7 +102,7 @@
                 <br>Eletrônica avançada (YCC-T, YCC-I)<br>
                 <br>Freios Brembo de alta performance.
             </p>
-            <a href="#" class="btn btn-success">Comprar</a>
+            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#compraModal">Comprar</a>
         </div>
     </div>
 
@@ -116,7 +116,7 @@
                 <br>Peso leve para a categoria (204kg)<br>
                 <br>Tanque de 16L e autonomia de 350km+
             </p>
-            <a href="#" class="btn btn-success">Comprar</a>
+            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#compraModal">Comprar</a>
         </div>
     </div>
 
@@ -130,10 +130,28 @@
                 <br>Posição de pilotagem ergonômica (ideal para trânsito pesado).<br>
                 <br>ABS duplo (nas duas rodas) + TCS (controle de tração).
             </p>
-            <a href="#" class="btn btn-success">Comprar</a>
+            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#compraModal">Comprar</a>
         </div>
     </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <div class="modal fade" id="compraModal" tabindex="-1" aria-labelledby="compraModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="compraModalLabel">Confirmação de Compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <p>Você deseja confirmar a compra deste veículo?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a href="obrigado.html"><button type="button" class="btn btn-success">Confirmar Compra</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
