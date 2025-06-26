@@ -1,0 +1,10 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(78, 78, 78);
+}
+
+.fonte{
+    color:rgb(170, 125, 125) !important;
+    font-weight: bold;
+}
