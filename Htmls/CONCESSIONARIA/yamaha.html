@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>CONCESSIONÁRIA</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid fonte">
+            <!-- navbar -->
+            <a class="navbar-brand" href="index.html">
+                <img src="https://images.freeimages.com/image/thumbs/f23/luxury-car-sketch-png-5693248.png" 
+                     alt="Logo Concessionária" 
+                     style="height: 8rem; width: auto; object-fit: contain;">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse fonte" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCarros" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Marcas de carros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCarros">
+                            <li><a class="dropdown-item fonte" href="toyota.html">🚗 Toyota</a></li>
+                            <li><a class="dropdown-item fonte" href="volksvagem.html">🚗 Volkswagen</a></li>
+                            <li><a class="dropdown-item fonte" href="Ford.html">🚗 Ford</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMotos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Marcas de motos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMotos">
+                            <li><a class="dropdown-item fonte" href="honda.html">🏍️ Honda</a></li>
+                            <li><a class="dropdown-item fonte" href="yamaha.html">🏍️ Yamaha</a></li>
+                            <li><a class="dropdown-item fonte" href="harley.html">🏍️ Harley-Davidson</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrossel -->
+    <div class="carousel-container fonte">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner borda">
+                <div class="carousel-item active">
+                    <img src="/yamaha11.webp" class="d-block w-100" alt="Carro 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Tecnologia e Inovação</h5>
+                        <p>A Yamaha está sempre na vanguarda da engenharia, com motores eficientes e duráveis (como o CP2 e o Crossplane).</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/yamaha2.webp" class="d-block w-100" alt="Carro 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Variedade de Modelos para Todos os Estilos</h5>
+                        <p>A Yamaha permite que você tenha varios modelos!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/yamaha3.webp" class="d-block w-100" alt="Carro 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Custo-Benefício e Revenda Valorizada</h5>
+                        <p>As motos Yamaha têm manutenção acessível e peças amplamente disponíveis.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            
+            </button>
+        </div>
+    </div>
+    
+<div class="cards-container">
+    <!-- Card Corolla -->
+    <div class="card modelos-card">
+        <h5 class="card-header">Yamaha</h5>
+        <div class="card-body">
+            <h5 class="card-title">MT-07 (Naked)</h5>
+            <p class="card-text">
+                <br>Chassi de alumínio Deltabox<br>
+                <br>Eletrônica avançada (YCC-T, YCC-I)<br>
+                <br>Freios Brembo de alta performance.
+            </p>
+            <a href="#" class="btn btn-success">Comprar</a>
+        </div>
+    </div>
+
+    <!-- Card Hilux -->
+    <div class="card modelos-card">
+        <h5 class="card-header">Yamaha</h5>
+        <div class="card-body">
+            <h5 class="card-title">XMAX 300 (scooter premium)</h5>
+            <p class="card-text">
+                <br>Suspensão com grande curso (210mm dianteira)<br>
+                <br>Peso leve para a categoria (204kg)<br>
+                <br>Tanque de 16L e autonomia de 350km+
+            </p>
+            <a href="#" class="btn btn-success">Comprar</a>
+        </div>
+    </div>
+
+    <!-- Card RAV4 -->
+    <div class="card modelos-card">
+        <h5 class="card-header">Yamaha</h5>
+        <div class="card-body">
+            <h5 class="card-title">Yamaha Tenere 700 (Adventure)</h5>
+            <p class="card-text">
+                <br>Banco largo e baixo (ajustável em duas alturas) + espaço para dois capacetes no under-seat.<br>
+                <br>Posição de pilotagem ergonômica (ideal para trânsito pesado).<br>
+                <br>ABS duplo (nas duas rodas) + TCS (controle de tração).
+            </p>
+            <a href="#" class="btn btn-success">Comprar</a>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

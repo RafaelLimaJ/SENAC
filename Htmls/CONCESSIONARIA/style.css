@@ -5,6 +5,89 @@ html,body{
 }
 
 .fonte{
-    color:rgb(170, 125, 125) !important;
+    color:rgb(122, 114, 114) !important;
     font-weight: bold;
+}
+
+
+.carousel-container {
+            max-width: 800px; /* Largura máxima do carrossel */
+            margin: 0 auto; /* Centraliza horizontalmente */
+            padding: 20px;
+        }
+        .carousel-item img {
+            height: 400px; /* Altura fixa para as imagens */
+            object-fit: cover; /* Mantém a proporção cobrindo a área */
+        }
+
+.modelos-card{
+    background-color: rgb(170, 170, 170);
+    border: 2px black solid;
+    border-radius: 25px;
+    width: 30rem;
+    text-align: center;
+}
+
+.borda{
+    border-radius: 30px;
+}
+
+
+
+/* Adicione estas regras ao seu arquivo style.css */
+.modelos-card {
+    background-color: rgb(170, 170, 170);
+    border: 2px black solid;
+    border-radius: 25px;
+    width: 25rem;
+    text-align: center;
+    margin: 15px; /* Espaçamento entre os cards */
+    font-weight: bold;
+}
+
+/* Container para centralizar os cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .modelos-card {
+        width: 90%;
+    }
+}
+
+.logos-marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: white;
+  border: 2px black solid;
+  width: 58rem;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logos-marcas a {
+  display: inline-block; /* Garante que o link não quebre a linha */
+  transition: transform 0.3s ease; /* Efeito suave ao aumentar */
+}
+
+.logos-marcas img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito ao passar o mouse: aumenta e destaca */
+.logos-marcas a:hover img {
+  transform: scale(1.1); /* Aumenta 10% */
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Sombra suave */
 }
