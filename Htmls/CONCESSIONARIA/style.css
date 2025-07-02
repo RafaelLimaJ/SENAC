@@ -92,46 +92,79 @@ html,body{
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Sombra suave */
 }
 
-.obrigado{
-    text-align: center;
-    background-color: white;
-    width: 40rem;
-    margin-left: 40rem;
-    border: 2px black solid;
-    border-radius: 100px;
-    margin-bottom: 2rem;
+.obrigado {
+  text-align: center;
+  background-color: white;
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto 2rem auto;
+  border: 2px black solid;
+  border-radius: 100px;
 }
 
 .obrigado-local {
-    background-color: white;
-    width: 8rem;
-    border-radius: 25px;
-    border: 2px black solid;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    align-items: center;
-    margin-left: 2rem; /* Margem da esquerda */
-    position: fixed; /* Fixa na posição */
-    top: 50%; /* Posiciona no meio vertical */
-    transform: translateY(-50%); /* Ajuste fino para centralização */
-    max-height: 80vh; /* Altura máxima */
+  background-color: white;
+  width: 8rem;
+  border-radius: 25px;
+  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 auto;
+  position: static;
+  transform: none;
+  max-height: none;
 }
 
 .obrigado-local img {
-    width: 100%;
-    max-width: 100px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    width: 100px;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Media Queries para telas maiores */
+@media (min-width: 1024px) {
+  .obrigado {
+      margin-left: 40rem;
+      margin-bottom: 2rem;
+  }
+  
+  .obrigado-local {
+      margin-left: 2rem;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      max-height: 80vh;
+  }
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .obrigado {
+      width: 70%;
+      margin: 0 auto 2rem auto;
+  }
+  
+  .obrigado-local {
+      width: 6rem;
+      padding: 0.8rem;
+  }
+}
+
+.animaçao img {
+  width: 100px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease, filter 0.3s ease; /* Transições suaves */
 }
 
-.animaçao a:hover img{
+/* Efeito ao passar o mouse: aumenta e destaca */
+.animaçao a:hover img {
   transform: scale(1.1); /* Aumenta 10% */
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Sombra suave */
 }

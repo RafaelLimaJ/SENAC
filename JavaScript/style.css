@@ -1,0 +1,29 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #001685;
+background: radial-gradient(circle, rgba(0, 22, 133, 1) 0%, rgba(23, 26, 128, 1) 54%, rgba(125, 125, 125, 1) 100%);
+}
+
+.img-holder{
+    background-image: url(/1434619451.svg);
+    height: 300px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 200% auto;
+}
+
+.container.on{
+    background: radial-gradient(circle,rgba(219, 219, 219, 1) 0%, rgba(227, 255, 71, 1) 54%, rgba(27, 41, 0, 1) 100%);
+}   
