@@ -8,7 +8,7 @@ matriz = [linha1,
           linha3,
           linha4]
 
-print (matriz[0])
+print (matriz)
 print (matriz[1])
 print (matriz[2])
 print (matriz[3])
