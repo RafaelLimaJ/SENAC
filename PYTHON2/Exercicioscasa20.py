@@ -3,10 +3,9 @@ b = 1
 
 def conta(a,b):
     for i in range(0, 10):
+        print (b)
         reset = a
-        a = reset
         a = b
-        b = a + b
-        print (a)
+        b = a + reset
 
 conta(a,b)
