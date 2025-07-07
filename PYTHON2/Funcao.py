@@ -117,4 +117,17 @@ def km():
           centimetros = int(input("Digite a quantidade de Centimetros para converter"))
           metro = centimetros / 100
           milimetro = centimetros * 10
-          print(f"{metro} metros\n {milimetro} Milimetros")     
+          print(f"{metro} metros\n {milimetro} Milimetros")
+def numeros_primo():
+    while True:
+        num = int(input("Digite o numero"))
+        check = 0
+
+        for i in range(1, num+1,):
+            if num % i == 0: 
+                check = check +1
+
+        if check == 2:
+            print ("Numero Primo")
+        else:
+            print ("Nao primo")
