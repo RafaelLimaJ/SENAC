@@ -13,4 +13,4 @@ Estante = {
         "potencia": "1000w"
         }
 }
-print(eletrodomesticos.values())
+print(Estante.values())
