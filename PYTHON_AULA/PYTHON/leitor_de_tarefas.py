@@ -1,12 +1,29 @@
-caminho = "tarefas.txt"
+import os
+tarefas = "tarefas.txt"
+with open(tarefas,"a", encoding="utf-8") as arquivo:
+    arquivo.write("")
+    
+def Ver_tarefas(tarefas):
+        with open(tarefas, "r", encoding="utf-8") as arquivo:
+            linhas = arquivo.read()
+            print(linhas)
+def add_tarefas(tarefas):
+     
+    add = input("Digite oque deseja adicionar na lista")
+    with open(tarefas, "a", encoding="utf-8") as arquivo:
+        arquivo.write(add + "\n")
 
-def ler_arquivo(caminho):
-    with open(caminho,"r", encoding="UTF-8") as arquivo:
-        print(arquivo.readlines())
 
+print("1 - Adicionar Tarefas\n2 - Ver Tarefas\n3 - Sair")
 
-with open(caminho, "a", encoding="utf-8") as arquivo:
-    texto = input("Digite uma nova tarefa:\n")
-
-
-    arquivo.write("\n" texto)
+while True:
+    try:
+        escolha = int(input("Escolha uma opçao\n"))
+        if escolha == 1:
+            add_tarefas(tarefas)
+        if escolha == 2:
+            Ver_tarefas(tarefas)
+        if escolha == 3:
+            break
+    except ValueError:
+        print("Valor invalido digite apenas numeros")
