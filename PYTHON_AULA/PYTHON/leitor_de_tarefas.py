@@ -8,15 +8,15 @@ def Ver_tarefas(tarefas):
             linhas = arquivo.read()
             print(linhas)
 def add_tarefas(tarefas):
-     
+      
     add = input("Digite oque deseja adicionar na lista")
     with open(tarefas, "a", encoding="utf-8") as arquivo:
         arquivo.write(add + "\n")
 
-
-print("1 - Adicionar Tarefas\n2 - Ver Tarefas\n3 - Sair")
-
 while True:
+    print("1 - Adicionar Tarefas\n2 - Ver Tarefas\n3 - Sair")
+
+
     try:
         escolha = int(input("Escolha uma opçao\n"))
         if escolha == 1:
