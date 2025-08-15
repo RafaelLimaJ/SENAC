@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block conteudo %}
+<h1>{{ car.name }}</h1>
+<img src="{{ car.image_url }}" alt="{{ car.name }}" width="400" />
+<p>{{ car.description }}</p>
+<strong>Preço: R$ {{ car.price }}</strong>
+<br />
+<a href="{% url 'car_list' %}">Voltar para a lista</a>
+{% endblock conteudo %}
