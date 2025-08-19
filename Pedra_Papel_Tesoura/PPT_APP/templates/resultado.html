@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Jogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a, #1a1a1a);
+            background-size: 400% 400%;
+            color: #f0f0f0; /* Light text for contrast */
+            overflow: hidden;
+            animation: moveGradient 15s ease infinite;
+        }
+
+        @keyframes moveGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            color: #e0e0e0;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            position: relative;
+            z-index: 1;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: #2a2a2a;
+            border-radius: 13px; /* 15px - 2px */
+            z-index: -1;
+        }
+        h1 {
+            color: #e0e0e0; /* Light heading */
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        p {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #c0c0c0; /* Slightly darker light text for paragraphs */
+        }
+        .result {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .result.win {
+            color: #4CAF50; /* Green for win */
+            background-color: rgba(76, 175, 80, 0.2); /* Light green background */
+        }
+        .result.lose {
+            color: #F44336; /* Red for lose */
+            background-color: rgba(244, 67, 54, 0.2); /* Light red background */
+        }
+        .result.draw {
+            color: #FFEB3B; /* Yellow for draw */
+            background-color: rgba(255, 235, 59, 0.2); /* Light yellow background */
+        }
+        .back-button {
+            background-color: #007bff; /* Light blue */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado do Jogo</h1>
+        <h2>Você escolheu: {{escolha_usuario}}</h2>
+        <h2>O computador escolheu: {{random_jogada}}</h2>
+        <h2>{{resultado}}</h2>
+    </div>
+    <a href="{% url 'home' %}" class="back-button">Jogar Novamente</a>
+</body>
+</html>
