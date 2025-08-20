@@ -1,0 +1,29 @@
+{% if not carrinho %}
+    <p class="text-center">Seu carrinho está vazio.</p>
+{% else %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto_id, item in carrinho.items %}
+            <tr>
+                <td>{{ item.nome }}</td>
+                <td>R$ {{ item.preco }}</td>
+                <td>{{ item.quantidade }}</td>
+                <td>R$ {% widthratio item.preco 1 item.quantidade %}</td>
+                <td><a href="{% url 'APP_FINAL:remover_do_carrinho' produto_id %}" class="btn btn-danger btn-sm">Remover</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-end">
+        <h4>Total: R$ {{ preco_total }}</h4>
+    </div>
+{% endif %}
